@@ -1,4 +1,4 @@
-var NoQuarterState = function (oGumballMachine){
+var NoQuarterState = function (oGumballMachine) {
     this.oGumballMachine = oGumballMachine;
 };
 NoQuarterState.prototype.insertQuarter = function () {

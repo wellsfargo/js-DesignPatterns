@@ -1,7 +1,7 @@
 var Download = function () {
     this.oState = new ReadyState(this);
 };
-Download.prototype.setState = function (oState){
+Download.prototype.setState = function (oState) {
     this.oState = oState;
 };
 Download.prototype.download = function () {

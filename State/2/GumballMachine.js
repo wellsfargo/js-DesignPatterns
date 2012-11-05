@@ -21,7 +21,7 @@ GumballMachine.prototype.releaseBall = function () {
     console.log("Get a gumball!");
     this.nGumballs = this.nGumballs - 1;
 };
-GumballMachine.prototype.setState = function (oState){
+GumballMachine.prototype.setState = function (oState) {
     this.oState = oState;
 };
 GumballMachine.prototype.getNoQuarterState = function () {

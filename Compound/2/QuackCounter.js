@@ -1,4 +1,4 @@
-var QuackCounter = function (oDuck){
+var QuackCounter = function (oDuck) {
     Quackable.apply(this);
     this.oDuck = oDuck;
     this.quack = function () {

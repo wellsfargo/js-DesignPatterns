@@ -1,6 +1,5 @@
 var Singleton = function () {
-    if(Singleton.instance == null)
-    {
+    if (Singleton.instance == null) {
         Singleton.instance = this;
     }
     return Singleton.instance;

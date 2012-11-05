@@ -1,37 +1,25 @@
-var ConvertToIterator = function (oObject, bStopAutoInit)
-{
-    if (typeof oObject === "undefined" || oObject === null)
-    {
+var ConvertToIterator = function (oObject, bStopAutoInit) {
+    if (typeof oObject === "undefined" || oObject === null) {
         return null;
     }
-
     this.nLastIndex = -1;
-
     this.aKeys = [];
-
     this.length = 0;
-
     this.aArray = oObject;
-
     this.bIsArray = Object.prototype.toString.call(this.aArray) === "[object Array]";
 
-    if(!bStopAutoInit)
-    {
+    if (!bStopAutoInit) {
         this._setKeysAndLength();
     }
 };
 ConvertToIterator.prototype._setKeysAndLength = function () {
     var sKey = '';
 
-    if (this.bIsArray)
-    {
+    if (this.bIsArray) {
         this.length = this.aArray.length;
-    }else
-    {
-        for (sKey in this.aArray)
-        {
-            if (this.aArray.hasOwnProperty(sKey))
-            {
+    } else {
+        for (sKey in this.aArray) {
+            if (this.aArray.hasOwnProperty(sKey)) {
                 this.aKeys.push(sKey);
                 this.length++;
             }
@@ -46,11 +34,9 @@ ConvertToIterator.prototype._getIndexObject = function () {
     return this.aKeys[this.nLastIndex];
 };
 ConvertToIterator.prototype.getIndex = function () {
-    if(this.bIsArray)
-    {
+    if (this.bIsArray) {
         this.getIndex = this._getIndexArray;
-    }else
-    {
+    } else {
         this.getIndex = this._getIndexObject;
     }
     this._getIndexObject = this._getIndexArray = null;
@@ -63,11 +49,9 @@ ConvertToIterator.prototype._getCurrentObject = function () {
     return this.aArray[this.aKeys[this.nLastIndex]];
 };
 ConvertToIterator.prototype.current = function () {
-    if (this.bIsArray)
-    {
+    if (this.bIsArray) {
         this.current = this._getCurrentArray;
-    }else
-    {
+    } else {
         this.current = this._getCurrentObject;
     }
 
@@ -77,74 +61,60 @@ ConvertToIterator.prototype.hasNext = function () {
     return (this.nLastIndex + 1) < this.length;
 };
 ConvertToIterator.prototype.hasPrev = function () {
-    return (this.nLastIndex - 1) > -1;
+    return (this.nLastIndex - 1) > - 1;
 };
 ConvertToIterator.prototype._nextArray = function () {
-    if (this.hasNext())
-    {
+    if (this.hasNext()) {
         return this.aArray[++this.nLastIndex];
     }
     return false;
 };
 ConvertToIterator.prototype._nextObject = function () {
-    if (this.hasNext())
-    {
+    if (this.hasNext()) {
         return this.aArray[this.aKeys[++this.nLastIndex]];
     }
     return false;
 };
 ConvertToIterator.prototype.next = function () {
-    if(this.length === 0)
-    {
+    if (this.length === 0) {
         return false;
     }
-    if (this.bIsArray)
-    {
+    if (this.bIsArray) {
         this.next = this._nextArray;
         this._nextArray = null;
-    }
-    else
-    {
+    } else {
         this.next = this._nextObject;
         this._nextObject = null;
     }
     return this.next();
 };
 ConvertToIterator.prototype._prevArray = function () {
-    if (this.hasPrev())
-    {
+    if (this.hasPrev()) {
         return this.aArray[--this.nLastIndex];
     }
     return false;
 };
 ConvertToIterator.prototype._prevObject = function () {
-    if (this.hasPrev())
-    {
+    if (this.hasPrev()) {
         return this.aArray[this.aKeys[--this.nLastIndex]];
     }
     return false;
 };
 ConvertToIterator.prototype.prev = function () {
-    if(this.length === 0)
-    {
+    if (this.length === 0) {
         return false;
     }
-    if (this.bIsArray)
-    {
+    if (this.bIsArray) {
         this.prev = this._prevArray;
         this._prevArray = null;
-    }
-    else
-    {
+    } else {
         this.prev = this._prevObject;
         this._prevObject = null;
     }
     return this.prev();
 };
-ConvertToIterator.prototype.movePointerTo = function (nIndex)
-{
-    if(nIndex > -1 && nIndex < this.length)
-    {
+ConvertToIterator.prototype.movePointerTo = function (nIndex) {
+    if (nIndex > - 1 && nIndex < this.length) {
         this.nLastIndex = nIndex;
     }
 };

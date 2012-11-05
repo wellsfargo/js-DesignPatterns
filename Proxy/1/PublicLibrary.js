@@ -13,8 +13,7 @@ PublicLibrary.prototype.setCatalogFromBooks = function (aBooks)
     var nLenBooks = aBooks.length;
     var oBook = null;
 
-    for (; nBook < nLenBooks; nBook++)
-    {
+    for (; nBook < nLenBooks; nBook++) {
         oBook = aBooks[nBook];
         this.oCatalog[oBook.getIsbn()] =
         {
@@ -30,14 +29,13 @@ PublicLibrary.prototype.findBooks = function (sQueryString)
     var aResults = [];
     var sIsbn = '';
     var oBook = null;
-    for (sIsbn in this.oCatalog)
-    {
-        if(!this.oCatalog.hasOwnProperty(sIsbn))
+    for (sIsbn in this.oCatalog) {
+        if (!this.oCatalog.hasOwnProperty(sIsbn))
         {
             continue;
         }
         oBook = this.oCatalog[sIsbn];
-        if(sQueryString.match(oBook.getTitle()) || sQueryString.match(oBook.getAuthor()))
+        if (sQueryString.match(oBook.getTitle()) || sQueryString.match(oBook.getAuthor()))
         {
             aResults.push(oBook);
         }
@@ -48,9 +46,8 @@ PublicLibrary.prototype.checkoutBook = function (oBookItem)
 {
     var sIsbn = oBookItem.getIsbn();
     var oBook = this.oCatalog[sIsbn];
-    if(oBook)
-    {
-        if(oBook.available)
+    if (oBook) {
+        if (oBook.available)
         {
             oBook.available = false;
             return oBook;
@@ -69,8 +66,7 @@ PublicLibrary.prototype.returnBook = function (oBookItem)
 {
     var sIsbn = oBook.getIsbn();
     var oBook = this.oCatalog[sIsbn];
-    if(oBook)
-    {
+    if (oBook) {
         oBook.available = true;
     }
     else

@@ -10,7 +10,7 @@ DvdPlayer.prototype.off = function () {
 DvdPlayer.prototype.eject = function () {
     console.log("Eject Dvd!");
 };
-DvdPlayer.prototype.play = function (oMovie){
+DvdPlayer.prototype.play = function (oMovie) {
     console.log("Playing " + oMovie.sName);
 };
 DvdPlayer.prototype.stop = function () {

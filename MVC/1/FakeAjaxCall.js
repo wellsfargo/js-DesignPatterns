@@ -1,5 +1,5 @@
-jQuery.ajax = function (oConfig){
-    switch(oConfig.url){
+jQuery.ajax = function (oConfig) {
+    switch(oConfig.url) {
         case "/todo-items/add":
             oConfig.success([
                 {

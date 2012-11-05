@@ -1,4 +1,4 @@
-var MenuItem = function (sName, sDescription, bVegetarian, nPrice){
+var MenuItem = function (sName, sDescription, bVegetarian, nPrice) {
     MenuComponent.apply(this);
     this.sName = sName;
     this.sDescription = sDescription;

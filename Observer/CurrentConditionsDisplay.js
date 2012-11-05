@@ -1,4 +1,4 @@
-var CurrentConditionsDisplay = function (oSubject){
+var CurrentConditionsDisplay = function (oSubject) {
     Observer.apply(this);
     Display.apply(this);
     this.nTemperature = 0;
@@ -6,7 +6,7 @@ var CurrentConditionsDisplay = function (oSubject){
     this.nPressure = 0;
     this.oSubject = oSubject;
     oSubject.registerObserver(this);
-    this.update = function (nTemperature, nHumidity, nPressure){
+    this.update = function (nTemperature, nHumidity, nPressure) {
         this.nTemperature = nTemperature;
         this.nHumidity = nHumidity;
         this.nPressure = nPressure;

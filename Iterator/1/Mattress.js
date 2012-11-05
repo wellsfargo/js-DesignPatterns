@@ -10,16 +10,14 @@ Mattress.prototype.printMenu = function () {
 
     nLenMenuItems = this.aBreakFastItems.length;
 
-    for (; nMenuItem < nLenMenuItems;)
-    {
+    for (; nMenuItem < nLenMenuItems;) {
         oMenuItem = this.aBreakFastItems[nMenuItem];
         console.log(oMenuItem.getName() + ": " + oMenuItem.getDescription() + ", " + oMenuItem.getPrice() + "eur.");
         nMenuItem = nMenuItem + 1;
     }
 
-    for (sKey in this.oLunchItems)
-    {
-        if(this.oLunchItems.hasOwnProperty(sKey)){
+    for (sKey in this.oLunchItems) {
+        if (this.oLunchItems.hasOwnProperty(sKey)) {
             oMenuItem = this.oLunchItems[sKey];
             console.log(oMenuItem.getName() + ": " + oMenuItem.getDescription() + ", " + oMenuItem.getPrice() + "eur.");
         }
@@ -33,8 +31,7 @@ Mattress.prototype.printBreakfastMenu = function () {
 
     nLenMenuItems = this.aBreakFastItems.length;
 
-    for (; nMenuItem < nLenMenuItems;)
-    {
+    for (; nMenuItem < nLenMenuItems;) {
         oMenuItem = this.aBreakFastItems[nMenuItem];
         console.log(oMenuItem.getName() + ": " + oMenuItem.getDescription() + ", " + oMenuItem.getPrice() + "eur.");
         nMenuItem = nMenuItem + 1;
@@ -43,16 +40,15 @@ Mattress.prototype.printBreakfastMenu = function () {
 Mattress.prototype.printLunchMenu = function () {
     var sKey = '';
     var oMenuItem = null;
-    for (sKey in this.oLunchItems)
-    {
-        if(this.oLunchItems.hasOwnProperty(sKey)){
+    for (sKey in this.oLunchItems) {
+        if (this.oLunchItems.hasOwnProperty(sKey)) {
             oMenuItem = this.oLunchItems[sKey];
             console.log(oMenuItem.getName() + ": " + oMenuItem.getDescription() + ", " + oMenuItem.getPrice() + "eur.");
         }
 
     }
 };
-Mattress.prototype.isItemVegetarian = function (sName){
+Mattress.prototype.isItemVegetarian = function (sName) {
     var nMenuItem = 0;
     var nLenMenuItems = 0;
     var oMenuItem = null;
@@ -60,20 +56,18 @@ Mattress.prototype.isItemVegetarian = function (sName){
 
     nLenMenuItems = this.aBreakFastItems.length;
 
-    for (; nMenuItem < nLenMenuItems;)
-    {
+    for (; nMenuItem < nLenMenuItems;) {
         oMenuItem = this.aBreakFastItems[nMenuItem];
-        if(oMenuItem.sName === sName){
+        if (oMenuItem.sName === sName) {
             return oMenuItem.isVegetarian();
         }
         nMenuItem = nMenuItem + 1;
     }
 
-    for (sKey in this.oLunchItems)
-    {
-        if(this.oLunchItems.hasOwnProperty(sKey)){
+    for (sKey in this.oLunchItems) {
+        if (this.oLunchItems.hasOwnProperty(sKey)) {
             oMenuItem = this.oLunchItems[sKey];
-            if(oMenuItem.sName === sName){
+            if (oMenuItem.sName === sName) {
                 return oMenuItem.isVegetarian();
             }
         }

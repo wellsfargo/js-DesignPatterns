@@ -14,7 +14,7 @@ Tuner.prototype.setAm = function () {
 Tuner.prototype.setFm = function () {
     console.log("Tuner FM!");
 };
-Tuner.prototype.setFrequency = function (nFrequency){
+Tuner.prototype.setFrequency = function (nFrequency) {
     this.nFrequency = nFrequency;
     console.log("Tuner frequency changed to " + nFrequency);
 };

@@ -3,13 +3,13 @@ var Flock = function () {
     this.quack = function () {
         var oIterator = new ConvertToIterator(this.aQuackers);
         var oQuacker = null;
-        while(oIterator.hasNext()){
+        while(oIterator.hasNext()) {
             oQuacker = oIterator.next();
             oQuacker.quack();
         }
     };
     this.aQuackers = [];
 };
-Flock.prototype.add = function (oQuackable){
+Flock.prototype.add = function (oQuackable) {
     this.aQuackers.push(oQuackable);
 };

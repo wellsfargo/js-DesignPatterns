@@ -10,7 +10,7 @@ var PancakeHouseMenu = function () {
     this.addItem("Blueberry Pancakes", "Pancakes made with fresh blueberries", true, 3.49);
     this.addItem("Waffles", "Waffles, with your choice of blueberries or strawberries", true, 3.59);
 };
-PancakeHouseMenu.prototype.addItem = function (sName, sDescription, bVegetarian, nPrice){
+PancakeHouseMenu.prototype.addItem = function (sName, sDescription, bVegetarian, nPrice) {
     var oMenuItem = new MenuItem(sName, sDescription, bVegetarian, nPrice);
     this.aMenuItems.push(oMenuItem);
 };

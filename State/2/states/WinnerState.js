@@ -1,4 +1,4 @@
-var WinnerState = function (oGumballMachine){
+var WinnerState = function (oGumballMachine) {
     this.oGumballMachine = oGumballMachine;
 };
 WinnerState.prototype.insertQuarter = function () {
@@ -14,9 +14,9 @@ WinnerState.prototype.dispense = function () {
     console.log("You're a Winner! You get two gumball for your quarter!");
     this.oGumballMachine.releaseBall();
     this.oGumballMachine.releaseBall();
-    if(this.oGumballMachine.getCount() > 0){
+    if (this.oGumballMachine.getCount() > 0) {
         this.oGumballMachine.setState(this.oGumballMachine.getNoQuarterState());
-    }else{
+    } else {
         console.log("Oops!, out of gumballs!");
         this.oGumballMachine.setState(this.oGumballMachine.getSoldOutState());
     }

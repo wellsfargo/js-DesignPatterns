@@ -1,4 +1,4 @@
-var HomeTheaterFacade = function ( oAmplifier, oTuner, oDvdPlayer, oCdPlayer, oProjector, oTheaterLights, oScreen, oPopcornPopper){
+var HomeTheaterFacade = function ( oAmplifier, oTuner, oDvdPlayer, oCdPlayer, oProjector, oTheaterLights, oScreen, oPopcornPopper) {
     this.oAmplifier = oAmplifier;
     this.oTuner = oTuner;
     this.oDvdPlayer = oDvdPlayer;
@@ -8,7 +8,7 @@ var HomeTheaterFacade = function ( oAmplifier, oTuner, oDvdPlayer, oCdPlayer, oP
     this.oScreen = oScreen;
     this.oPopcornPopper = oPopcornPopper;
 };
-HomeTheaterFacade.prototype.watchMovie = function (oMovie){
+HomeTheaterFacade.prototype.watchMovie = function (oMovie) {
     console.log("Get ready to watch a movie...");
     this.oPopcornPopper.on();
     this.oPopcornPopper.pop();
@@ -34,7 +34,7 @@ HomeTheaterFacade.prototype.endMovie = function () {
     this.oDvdPlayer.eject();
     this.oDvdPlayer.off();
 };
-HomeTheaterFacade.prototype.listenToCd = function (oCd){
+HomeTheaterFacade.prototype.listenToCd = function (oCd) {
     console.log("Start listening your music...");
     this.oAmplifier.on();
     this.oAmplifier.setCdPlayer(this.oCdPlayer);

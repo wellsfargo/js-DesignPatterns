@@ -1,4 +1,4 @@
-var SoldOutState = function (oGumballMachine){
+var SoldOutState = function (oGumballMachine) {
     this.oGumballMachine = oGumballMachine;
 };
 SoldOutState.prototype.insertQuarter = function () {

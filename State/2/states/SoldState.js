@@ -1,4 +1,4 @@
-var SoldState = function (oGumballMachine){
+var SoldState = function (oGumballMachine) {
     this.oGumballMachine = oGumballMachine;
 };
 SoldState.prototype.insertQuarter = function () {
@@ -12,9 +12,9 @@ SoldState.prototype.turnCrank = function () {
 };
 SoldState.prototype.dispense = function () {
     this.oGumballMachine.releaseBall();
-    if(this.oGumballMachine.getCount() > 0){
+    if (this.oGumballMachine.getCount() > 0) {
         this.oGumballMachine.setState(this.oGumballMachine.getNoQuarterState());
-    }else{
+    } else {
         console.log("Oops!, out of gumballs!");
         this.oGumballMachine.setState(this.oGumballMachine.getSoldOutState());
     }

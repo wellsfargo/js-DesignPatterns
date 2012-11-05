@@ -1,4 +1,4 @@
-var CafeMenuIterator = function (aMenuItems){
+var CafeMenuIterator = function (aMenuItems) {
     this.aMenuItems = aMenuItems;
     Iterator.apply(this);
     this.nPosition = -1;

@@ -1,7 +1,7 @@
 var TodoModel = function () {
     this.aItems = [];
 };
-TodoModel.prototype.add = function (oItem, fpCallback){
+TodoModel.prototype.add = function (oItem, fpCallback) {
      this.aItems.push({
         text: oItem,
         done: false,
@@ -19,7 +19,7 @@ TodoModel.prototype.add = function (oItem, fpCallback){
         }
     });
 };
-TodoModel.prototype.all = function (fpCallback){
+TodoModel.prototype.all = function (fpCallback) {
     jQuery.ajax({
         url: "/todo-items",
         success: function (oData) {
@@ -30,7 +30,7 @@ TodoModel.prototype.all = function (fpCallback){
         }
     });
 };
-TodoModel.prototype.undoItem = function (sId, fpCallback){
+TodoModel.prototype.undoItem = function (sId, fpCallback) {
     jQuery.ajax({
         url: "/todo-items/undo",
         type: "POST",
@@ -42,7 +42,7 @@ TodoModel.prototype.undoItem = function (sId, fpCallback){
         }
     });
 };
-TodoModel.prototype.completeItem = function (sId, fpCallback){
+TodoModel.prototype.completeItem = function (sId, fpCallback) {
     jQuery.ajax({
         url: "/todo-items/complete",
         type: "POST",

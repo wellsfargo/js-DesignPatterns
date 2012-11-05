@@ -4,12 +4,12 @@ var Flock = function () {
     this.quack = function () {
         var oIterator = new ConvertToIterator(this.aQuackers);
         var oQuacker = null;
-        while(oIterator.hasNext()){
+        while(oIterator.hasNext()) {
             oQuacker = oIterator.next();
             oQuacker.quack();
         }
     };
-    this.registerObserver = function (oObserver){
+    this.registerObserver = function (oObserver) {
         this.oObservable.registerObserver(oObserver);
     };
     this.notifyObservers = function () {
@@ -17,6 +17,6 @@ var Flock = function () {
     };
     this.aQuackers = [];
 };
-Flock.prototype.add = function (oQuackable){
+Flock.prototype.add = function (oQuackable) {
     this.aQuackers.push(oQuackable);
 };

@@ -1,7 +1,7 @@
 var PizzaStore = function () {
 
 };
-PizzaStore.prototype.orderPizza = function (sType){
+PizzaStore.prototype.orderPizza = function (sType) {
     var oPizza = null;
     oPizza = this.createPizza(sType);
 

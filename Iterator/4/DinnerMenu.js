@@ -10,8 +10,8 @@ var DinnerMenu = function () {
     this.addItem("Hotdog", "A hotdog with saurkraut, relish, onions, topped with cheese", false, 3.05);
 };
 DinnerMenu.MAX_ITEMS = 6;
-DinnerMenu.prototype.addItem = function (sName, sDescription, bVegetarian, nPrice){
-    if(this.length === DinnerMenu.MAX_ITEMS){
+DinnerMenu.prototype.addItem = function (sName, sDescription, bVegetarian, nPrice) {
+    if (this.length === DinnerMenu.MAX_ITEMS) {
         throw new Error("Sorry menu is full! Can't add item to menu");
     }
     this.oMenuItems[sName] = new MenuItem(sName, sDescription, bVegetarian, nPrice);

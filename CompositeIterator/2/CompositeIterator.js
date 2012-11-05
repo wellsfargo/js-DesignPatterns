@@ -1,16 +1,16 @@
-var CompositeIterator = function (oIterator){
+var CompositeIterator = function (oIterator) {
     Iterator.apply(this);
     this.aStack = [oIterator];
     this.hasNext = function () {
         var oIterator = null;
-        if(this.aStack.length === 0){
+        if (this.aStack.length === 0) {
             return false;
-        }else {
+        } else {
             oIterator = this.aStack[this.aStack.length-1];
-            if(oIterator.hasNext() === false){
+            if (oIterator.hasNext() === false) {
                 this.aStack.pop();
                 return this.hasNext();
-            }else{
+            } else {
                 return true;
             }
         }
@@ -18,14 +18,14 @@ var CompositeIterator = function (oIterator){
     this.next = function () {
         var oIterator = null;
         var oMenuComponent = null;
-        if(this.hasNext()){
+        if (this.hasNext()) {
             oIterator = this.aStack[this.aStack.length-1];
             oMenuComponent = oIterator.next();
-            if(oMenuComponent instanceof Menu){
+            if (oMenuComponent instanceof Menu) {
                 this.aStack.push(oMenuComponent.createIterator());
             }
             return oMenuComponent;
-        }else{
+        } else {
             return null;
         }
     };    

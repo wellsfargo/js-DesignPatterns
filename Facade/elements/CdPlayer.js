@@ -10,7 +10,7 @@ CdPlayer.prototype.off = function () {
 CdPlayer.prototype.eject = function () {
     console.log("Eject Cd!");
 };
-CdPlayer.prototype.play = function (oCd){
+CdPlayer.prototype.play = function (oCd) {
     console.log("Playing " + oCd.sName);
 };
 CdPlayer.prototype.stop = function () {

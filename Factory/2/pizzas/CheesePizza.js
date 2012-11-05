@@ -1,4 +1,4 @@
-var CheesePizza = function (oIngredientFactory){
+var CheesePizza = function (oIngredientFactory) {
     Pizza.apply(this);
     this.oIngredientFactory = oIngredientFactory;
 };

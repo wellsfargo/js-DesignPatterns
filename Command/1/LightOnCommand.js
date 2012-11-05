@@ -1,4 +1,4 @@
-var LightOnCommand = function (oLight){
+var LightOnCommand = function (oLight) {
     Command.apply(this);
     this.oLight = oLight;
 };

@@ -1,34 +1,31 @@
-(function (win)
-{
+(function (win) {
     var oContainer = null;
-    function setContainer(oCont)
-    {
+
+    function setContainer(oCont) {
         oContainer = oCont;
     }
-    function addZero(nTime)
-    {
-        return nTime < 10? '0' + nTime: nTime;
+
+    function addZero(nTime) {
+        return nTime < 10 ? '0' + nTime : nTime;
     }
-    function getFormattedTime(dTime)
-    {
+
+    function getFormattedTime(dTime) {
         return addZero(dTime.getHours()) + ":" + addZero(dTime.getMinutes()) + ":" + addZero(dTime.getSeconds());
     }
-    function insertTestModule()
-    {
+
+    function insertTestModule() {
         oContainer.innerHTML = 'Test Module: ' + getFormattedTime(new Date());
     }
-    function removeContent()
-    {
+
+    function removeContent() {
         oContainer.innerHTML = '';
     }
     win.ModuleRevealed = {
-        init: function (oContainer)
-        {
+        init: function (oContainer) {
             setContainer(oContainer);
             insertTestModule();
         },
-        destroy: function ()
-        {
+        destroy: function () {
             removeContent();
         }
     };

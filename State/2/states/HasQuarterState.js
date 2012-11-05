@@ -1,4 +1,4 @@
-var HasQuarterState = function (oGumballMachine){
+var HasQuarterState = function (oGumballMachine) {
     this.nRandomWinner = Math.random();
     this.oGumballMachine = oGumballMachine;
 };
@@ -11,10 +11,10 @@ HasQuarterState.prototype.ejectQuarter = function () {
 };
 HasQuarterState.prototype.turnCrank = function () {
     console.log("You turned...");
-    if(this.nRandomWinner < 0.20){
+    if (this.nRandomWinner < 0.20) {
         console.log("Winner state");
         this.oGumballMachine.setState(this.oGumballMachine.getWinnerState());
-    }else{
+    } else {
         console.log("Sold state");
         this.oGumballMachine.setState(this.oGumballMachine.getSoldState());
     }

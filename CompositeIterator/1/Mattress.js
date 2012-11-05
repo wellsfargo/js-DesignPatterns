@@ -1,4 +1,4 @@
-var Mattress = function (aMenus){
+var Mattress = function (aMenus) {
     this.aMenus = aMenus;
 };
 Mattress.prototype.printMenu = function () {

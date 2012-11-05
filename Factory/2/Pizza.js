@@ -22,6 +22,6 @@ Pizza.prototype.box = function () {
 Pizza.prototype.getName = function () {
     return this.sName;
 };
-Pizza.prototype.setName = function (sName){
+Pizza.prototype.setName = function (sName) {
     this.sName = sName;
 };

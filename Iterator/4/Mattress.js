@@ -1,9 +1,9 @@
-var Mattress = function (aMenus){
+var Mattress = function (aMenus) {
     this.aMenus = aMenus;
 };
-Mattress.prototype._printMenu = function (oIterator){
+Mattress.prototype._printMenu = function (oIterator) {
     var oMenuItem = null;
-    while(oIterator.hasNext()){
+    while(oIterator.hasNext()) {
         oMenuItem = oIterator.next();
         console.log(oMenuItem.getName() + ": " + oMenuItem.getDescription() + ", " + oMenuItem.getPrice() + "eur.");
     }
@@ -14,8 +14,7 @@ Mattress.prototype.printMenu = function () {
     var oMenu = null;
     var oIterator = null;
 
-    for (; nMenu < nLenMenus;)
-    {
+    for (; nMenu < nLenMenus;) {
         oMenu = this.aMenus[nMenu];
         oIterator = oMenu.createIterator();
         this._printMenu(oIterator);

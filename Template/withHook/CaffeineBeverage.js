@@ -5,7 +5,7 @@ CaffeineBeverage.prototype.prepareRecipe = function () {
     this.boilWater();
     this.brew();
     this.pourOnCup();
-    if(this.customerWantsCondiments()){
+    if (this.customerWantsCondiments()) {
         this.addCondiments();
     }
 };

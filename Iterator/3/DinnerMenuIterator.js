@@ -1,4 +1,4 @@
-var DinnerMenuIterator = function (oMenuItems){
+var DinnerMenuIterator = function (oMenuItems) {
     this.oMenuItems = oMenuItems;
     Iterator.apply(this);
     this.nPosition = -1;
@@ -13,8 +13,8 @@ var DinnerMenuIterator = function (oMenuItems){
     this._getKeys = function () {
         var aKeys = [];
         var sKey = '';
-        for (sKey in this.oMenuItems){
-            if(this.oMenuItems.hasOwnProperty(sKey)){
+        for (sKey in this.oMenuItems) {
+            if (this.oMenuItems.hasOwnProperty(sKey)) {
                 aKeys.push(sKey);
                 this.nLength = this.nLength + 1;
             }

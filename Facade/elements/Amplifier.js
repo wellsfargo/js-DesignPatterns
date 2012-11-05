@@ -12,19 +12,19 @@ Amplifier.prototype.on = function () {
 Amplifier.prototype.off = function () {
     console.log("Projector is off!");
 };
-Amplifier.prototype.setVolume = function (nVolume){
+Amplifier.prototype.setVolume = function (nVolume) {
     this.nVolume = nVolume;
     console.log("Volume change to " + nVolume);
 };
-Amplifier.prototype.setDvdPlayer = function (oDvdPlayer){
+Amplifier.prototype.setDvdPlayer = function (oDvdPlayer) {
     this.oDvdPlayer = oDvdPlayer;
     console.log("Plugged DVD Player to Amplifier!");
 };
-Amplifier.prototype.setCdPlayer = function (oCdPlayer){
+Amplifier.prototype.setCdPlayer = function (oCdPlayer) {
     this.oCdPlayer = oCdPlayer;
     console.log("Plugged Cd Player to Amplifier!");
 };
-Amplifier.prototype.setTuner = function (oTuner){
+Amplifier.prototype.setTuner = function (oTuner) {
     this.oTuner = oTuner;
     console.log("Plugged on DVD to Amplifier!");
 };

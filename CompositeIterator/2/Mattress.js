@@ -1,4 +1,4 @@
-var Mattress = function (aMenus){
+var Mattress = function (aMenus) {
     this.aMenus = aMenus;
 };
 Mattress.prototype.printMenu = function () {
@@ -8,12 +8,12 @@ Mattress.prototype.printVegetarianMenu = function () {
     var oIterator = this.aMenus.createIterator();
     var oMenuComponent = null;
     console.log("VEGETARIAN MENU");
-    while(oIterator.hasNext()){
+    while(oIterator.hasNext()) {
         oMenuComponent = oIterator.next();
         try{
-            if(oMenuComponent.isVegetarian()){
+            if (oMenuComponent.isVegetarian()) {
                 oMenuComponent.print();
             }
-        }catch(erError){}
+        }catch(erError) {}
     }
 };

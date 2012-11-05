@@ -1,4 +1,4 @@
-var PancakeHouseMenuIterator = function (aMenuItems){
+var PancakeHouseMenuIterator = function (aMenuItems) {
     this.aMenuItems = aMenuItems;
     Iterator.apply(this);
     this.nPosition = -1;

@@ -1,10 +1,10 @@
-var ListController = function (oView, oModel){
+var ListController = function (oView, oModel) {
     this.oView = oView;
     this.oModel = oModel;
 };
 ListController.prototype.init = function () {
     var self = this;
-    this.oModel.all(function (oErr, aItems){
+    this.oModel.all(function (oErr, aItems) {
 
         var todoHTML = '';
         var doneHTML = '';
@@ -12,15 +12,15 @@ ListController.prototype.init = function () {
         var nLenItems = aItems.length;
         var oItem = null;
 
-        if(oErr){
+        if (oErr) {
             return self.handleError("Server failed to get todo items", oErr);
         }
 
-        for (; nItem < nLenItems;){
+        for (; nItem < nLenItems;) {
             oItem = aItems[nItem];
-            if(oItem.done){
+            if (oItem.done) {
                 doneHTML += "<li class='done' id='item_" + nItem + "'>" + oItem.text + "</li>";
-            }else{
+            } else {
                 todoHTML += "<li class='todo' id='item_" + nItem + "'>" + oItem.text + "</li>";
             }
             nItem = nItem + 1;
@@ -41,7 +41,7 @@ ListController.prototype.init = function () {
         });
     });
 };
-ListController.prototype.handleError = function (sMessage){
+ListController.prototype.handleError = function (sMessage) {
     var oLi = document.createElement("li");
     oLi.className = "error";
     oLi.innerHTML = sMessage;

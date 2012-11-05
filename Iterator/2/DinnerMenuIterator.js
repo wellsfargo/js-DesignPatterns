@@ -1,4 +1,4 @@
-var DinnerMenuIterator = function (oMenuItems){
+var DinnerMenuIterator = function (oMenuItems) {
     this.oMenuItems = oMenuItems;
     Iterator.apply(this);
     this.nPosition = -1;
@@ -11,12 +11,12 @@ var DinnerMenuIterator = function (oMenuItems){
         return this.oMenuItems[this.aKeys[this.nPosition]];
     };
     this._modifyPositionOnRemove = function () {
-        if(this.nPosition >= this.nLength){
+        if (this.nPosition >= this.nLength) {
             this.nPosition = this.nLength -1;
         }
     };
     this.remove = function () {
-        if(this.nPosition === -1){
+        if (this.nPosition === -1) {
             throw new Error("You can't remove an item until you've done at least one next()!");
         }
         delete this.aMenuItems[this.nPosition];
@@ -29,8 +29,8 @@ var DinnerMenuIterator = function (oMenuItems){
     this._getKeys = function () {
         var aKeys = [];
         var sKey = '';
-        for (sKey in this.oMenuItems){
-            if(this.oMenuItems.hasOwnProperty(sKey)){
+        for (sKey in this.oMenuItems) {
+            if (this.oMenuItems.hasOwnProperty(sKey)) {
                 aKeys.push(sKey);
                 this.nLength = this.nLength + 1;
             }

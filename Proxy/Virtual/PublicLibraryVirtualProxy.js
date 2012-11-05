@@ -6,8 +6,7 @@ var PublicLibraryVirtualProxy = function (aCatalog)
     // Store the argument to the constructor.
 };
 PublicLibraryVirtualProxy.prototype._initializeLibrary = function () {
-    if(this.oLibrary === null)
-    {
+    if (this.oLibrary === null) {
         this.oLibrary = new PublicLibrary(this.aCatalog);
     }
 };

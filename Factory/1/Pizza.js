@@ -14,8 +14,7 @@ Pizza.prototype.prepare = function () {
     console.log("Adding sauce");
     console.log("Adding toppings:");
 
-    for (; nTopping < nLenToppings;)
-    {
+    for (; nTopping < nLenToppings;) {
         sTopping = this.aToppings[nTopping];
         console.log(sTopping + "  ");
         nTopping = nTopping + 1;

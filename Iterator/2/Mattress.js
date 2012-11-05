@@ -1,10 +1,10 @@
-var Mattress = function (oPancakeHouseMenu, oDinnerMenu){
+var Mattress = function (oPancakeHouseMenu, oDinnerMenu) {
     this.oPancakeHouseMenu = oPancakeHouseMenu;
     this.oDinnerMenu = oDinnerMenu;
 };
-Mattress.prototype._printMenu = function (oIterator){
+Mattress.prototype._printMenu = function (oIterator) {
     var oMenuItem = null;
-    while(oIterator.hasNext()){
+    while(oIterator.hasNext()) {
         oMenuItem = oIterator.next();
         console.log(oMenuItem.getName() + ": " + oMenuItem.getDescription() + ", " + oMenuItem.getPrice() + "eur.");
     }
@@ -26,20 +26,20 @@ Mattress.prototype.printLunchMenu = function () {
     var oIteratorDinnerMenu = this.oDinnerMenu.createIterator();
     this._printMenu(oIteratorDinnerMenu);
 };
-Mattress.prototype.isItemVegetarian = function (sName){
+Mattress.prototype.isItemVegetarian = function (sName) {
     var oIteratorPancakeHouseMenu = this.oPancakeHouseMenu.createIterator();
     var oIteratorDinnerMenu = this.oDinnerMenu.createIterator();
     var oMenuItem = null;
 
-    while(oIteratorPancakeHouseMenu.hasNext()){
+    while(oIteratorPancakeHouseMenu.hasNext()) {
         oMenuItem = oIteratorPancakeHouseMenu.next();
-        if(oMenuItem.sName === sName){
+        if (oMenuItem.sName === sName) {
             return oMenuItem.isVegetarian();
         }
     }
-    while(oIteratorDinnerMenu.hasNext()){
+    while(oIteratorDinnerMenu.hasNext()) {
         oMenuItem = oIteratorDinnerMenu.next();
-        if(oMenuItem.sName === sName){
+        if (oMenuItem.sName === sName) {
             return oMenuItem.isVegetarian();
         }
     }

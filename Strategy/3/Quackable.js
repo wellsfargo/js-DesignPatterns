@@ -1,4 +1,4 @@
-var Quackable = function (fpCallback){
+var Quackable = function (fpCallback) {
     this.quack = function () {
         fpCallback();
     };

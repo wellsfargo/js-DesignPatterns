@@ -5,18 +5,18 @@ var Movie = function () {
     this.aActors = [];
     this.sDescription = '';
 };
-Movie.prototype.setName = function (sName){
+Movie.prototype.setName = function (sName) {
     this.sName = sName;
 };
-Movie.prototype.setMinutes = function (nMinutes){
+Movie.prototype.setMinutes = function (nMinutes) {
     this.nMinutes = nMinutes;
 };
-Movie.prototype.setDirector = function (sDirector){
+Movie.prototype.setDirector = function (sDirector) {
     this.sDirector = sDirector;
 };
-Movie.prototype.setActors = function (aActors){
+Movie.prototype.setActors = function (aActors) {
     this.aActors = aActors;
 };
-Movie.prototype.setDescription = function (sDescription){
+Movie.prototype.setDescription = function (sDescription) {
     this.sDescription = sDescription;
 };
