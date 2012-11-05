@@ -1,3 +1,3 @@
-var RedPepper = function(){
+var RedPepper = function () {
 
 };

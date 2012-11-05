@@ -1,9 +1,9 @@
-var Screen = function(){
+var Screen = function () {
 
 };
-Screen.prototype.down = function(){
-	console.log("The screen is down!");
+Screen.prototype.down = function () {
+    console.log("The screen is down!");
 };
-Screen.prototype.up = function(){
-	console.log("The screen is up!");
+Screen.prototype.up = function () {
+    console.log("The screen is up!");
 };

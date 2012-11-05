@@ -1,3 +1,3 @@
-var FreshClams = function(){
+var FreshClams = function () {
 
 };

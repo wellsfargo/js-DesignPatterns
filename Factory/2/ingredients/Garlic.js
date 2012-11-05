@@ -1,3 +1,3 @@
-var Garlic = function(){
+var Garlic = function () {
 
 };

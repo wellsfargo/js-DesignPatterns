@@ -1,5 +1,5 @@
-var Goose = function(){
-	this.honk = function(){
-		console.log("Honk!");
-	};
+var Goose = function () {
+    this.honk = function () {
+        console.log("Honk!");
+    };
 };

@@ -1,3 +1,3 @@
-var MarinaraSauce = function(){
+var MarinaraSauce = function () {
 
 };

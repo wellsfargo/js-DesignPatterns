@@ -1,3 +1,3 @@
-var ReggianoCheese = function(){
+var ReggianoCheese = function () {
 
 };

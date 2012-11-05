@@ -1,3 +1,3 @@
-var ThinCrustDough = function(){
+var ThinCrustDough = function () {
 
 };

@@ -1,6 +1,6 @@
-var GooseAdapter = function(oGoose){
-	this.oGoose = oGoose;
+var GooseAdapter = function (oGoose){
+    this.oGoose = oGoose;
 };
-GooseAdapter.prototype.quack = function(){
-	this.oGoose.honk();
+GooseAdapter.prototype.quack = function () {
+    this.oGoose.honk();
 };

@@ -1,3 +1,3 @@
-var Onion = function(){
+var Onion = function () {
 
 };

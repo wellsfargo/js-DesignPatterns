@@ -1,3 +1,3 @@
-var Mushroom = function(){
+var Mushroom = function () {
 
 };

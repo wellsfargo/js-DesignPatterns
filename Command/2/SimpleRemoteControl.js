@@ -1,12 +1,12 @@
-var SimpleRemoteControl = function(){
-	this.oCommand = null;
+var SimpleRemoteControl = function () {
+    this.oCommand = null;
 };
-SimpleRemoteControl.prototype.setCommand = function(oCommand){
-	this.oCommand = oCommand;
+SimpleRemoteControl.prototype.setCommand = function (oCommand){
+    this.oCommand = oCommand;
 };
-SimpleRemoteControl.prototype.buttonWasPressed = function(){
-	this.oCommand.execute();
+SimpleRemoteControl.prototype.buttonWasPressed = function () {
+    this.oCommand.execute();
 };
-SimpleRemoteControl.prototype.buttonUndoWasPressed = function(){
-	this.oCommand.undo();
+SimpleRemoteControl.prototype.buttonUndoWasPressed = function () {
+    this.oCommand.undo();
 };

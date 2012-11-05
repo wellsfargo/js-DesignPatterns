@@ -1,9 +1,9 @@
 <html>
   <head>
     <link type="text/css" rel="stylesheet" href="../../css/style.css"/>
-	<title>Proxy Pattern</title>
-	<script type="text/javascript" src="PublicLibrary.js"></script>
-	<script type="text/javascript" src="PublicLibraryProxy.js"></script>
+    <title>Proxy Pattern</title>
+    <script type="text/javascript" src="PublicLibrary.js"></script>
+    <script type="text/javascript" src="PublicLibraryProxy.js"></script>
   </head>
   <body>
     <div id="source">
@@ -14,14 +14,14 @@ oProxyLibrary.findBooks('test');
       </pre>
     </div>
     <div id="console">
-    	<h2>Console</h2>
-	    <ul></ul>
-	    <h1>PROXY</h1>
+        <h2>Console</h2>
+        <ul></ul>
+        <h1>PROXY</h1>
     </div>
     <script type="text/javascript" src="../../js/utils.js"></script>
     <script type="text/javascript">
-		var oProxyLibrary = new PublicLibraryProxy([]);
-		oProxyLibrary.findBooks('test');
+        var oProxyLibrary = new PublicLibraryProxy([]);
+        oProxyLibrary.findBooks('test');
     </script>
   </body>
 </html>

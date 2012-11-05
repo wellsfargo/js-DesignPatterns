@@ -1,3 +1,3 @@
-var SlicedPepperoni = function(){
+var SlicedPepperoni = function () {
 
 };

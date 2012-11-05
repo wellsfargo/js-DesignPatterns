@@ -1,6 +1,6 @@
-var RubberDuck = function(){
-	Quackable.apply(this);
-	this.quack = function(){
-		console.log("Kwak!");
-	};
+var RubberDuck = function () {
+    Quackable.apply(this);
+    this.quack = function () {
+        console.log("Kwak!");
+    };
 };
