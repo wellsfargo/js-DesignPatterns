@@ -1,5 +1,4 @@
-var CondimentDecorator = function()
-{
-	Beverage.apply(this);
+var CondimentDecorator = function () {
+    Beverage.apply(this);
 };
 CondimentDecorator.prototype = new Beverage();
