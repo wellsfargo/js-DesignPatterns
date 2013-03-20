@@ -2,10 +2,10 @@
   <head>
     <link type="text/css" rel="stylesheet" href="../../css/style.css"/>
     <title>Command Pattern</title>
-	<script type="text/javascript" src="Command.js"></script>
-	<script type="text/javascript" src="Light.js"></script>
-	<script type="text/javascript" src="SimpleRemoteControl.js"></script>
-	<script type="text/javascript" src="LightOnCommand.js"></script>
+	<script src="Command.js"></script>
+	<script src="Light.js"></script>
+	<script src="SimpleRemoteControl.js"></script>
+	<script src="LightOnCommand.js"></script>
   </head>
   <body>
     <div id="source">
@@ -24,8 +24,8 @@ oSimpleRemote.buttonWasPressed();
 	    <ul></ul>
 	    <h1>COMMAND</h1>
     </div>
-    <script type="text/javascript" src="../../js/utils.js"></script>
-    <script type="text/javascript">
+    <script src="../../js/utils.js"></script>
+    <script>
 		var oSimpleRemote = new SimpleRemoteControl();
 		var oLight = new Light();
 		var oLightCommand = new LightOnCommand(oLight);

@@ -2,8 +2,8 @@
   <head>
     <link type="text/css" rel="stylesheet" href="../../css/style.css"/>
 	<title>Proxy Pattern</title>
-	<script type="text/javascript" src="PublicLibrary.js"></script>
-	<script type="text/javascript" src="PublicLibraryProxy.js"></script>
+	<script src="PublicLibrary.js"></script>
+	<script src="PublicLibraryProxy.js"></script>
   </head>
   <body>
     <div id="source">
@@ -18,8 +18,8 @@ oProxyLibrary.findBooks('test');
 	    <ul></ul>
 	    <h1>PROXY</h1>
     </div>
-    <script type="text/javascript" src="../../js/utils.js"></script>
-    <script type="text/javascript">
+    <script src="../../js/utils.js"></script>
+    <script>
 		var oProxyLibrary = new PublicLibraryProxy([]);
 		oProxyLibrary.findBooks('test');
     </script>
